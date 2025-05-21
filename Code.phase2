@@ -1,0 +1,407 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Karkos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🐾 Pet Karkos</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2> ' The right  place for your little friends  '</h2>
+  </section>
+
+  <<section id="products">
+  <h3>Our Products</h3>
+  <div class="product-list">
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Trailer Chicken and Rice">
+      <h4>Trailer Chicken & Rice 15Kg (Maintenance)</h4>
+      <p>$35.00</p>
+      <button onclick="addToCart('Trailer Chicken & Rice 15Kg', 42)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Ambrosia Chicken and Veggies">
+      <h4>Ambrosia Chicken & Veggies 12Kg</h4>
+      <p>$50.00</p>
+      <button onclick="addToCart('Ambrosia Chicken & Veggies 12Kg', 50)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Reflex Lamb and Rice">
+      <h4>Reflex Light Sterilised Lamb & Rice 15Kg (Maintenance)</h4>
+      <p>$47.00</p>
+      <button onclick="addToCart('Reflex Light Lamb & Rice 15Kg', 47)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>">
+    <h3>Our Products</h3>
+    <div class="product-list">
+      <div class="product">
+        <="https://via.placeholder.com/150" alt="Dog Food">
+        <h4>Reflex Adult Urinary 15Kg</h4>
+        <p>$60.00</p>
+        <button onclick="addToCart('Dog Food', 20)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Cat Toy">
+        <h4>Cat Toy</h4>
+        <p>$8.00</p>
+        <button onclick="addToCart('Cat Toy', 8)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pet Karkos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Pet Karkos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout - Pet Karkos</h1>
+  </header>
+
+  <section>
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+  </section>
+
+  <section>
+    <h2>Customer Details</h2>
+    <form onsubmit="submitOrder(event)">
+      <input type="text" placeholder="Full Name" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <input type="text" placeholder="Address" required><br><br>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const list = document.getElementById('cart-list');
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
+      list.appendChild(li);
+      total += item.price;
+    });
+
+    document.getElementById('total').textContent = total.toFixed(2);
+
+    function submitOrder(e) {
+      e.preventDefault();
+      alert('Order submitted! Thank you for shopping with Pet Karkos.');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Karkos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🐾 Pet Karkos</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Your One-Stop Shop for Pet Food & Accessories</h2>
+  </section>
+
+  <<section id="products">
+  <h3>Our Products</h3>
+  <div class="product-list">
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Trailer Chicken and Rice">
+      <h4>Trailer Chicken & Rice 15Kg (Maintenance)</h4>
+      <p>$35.00</p>
+      <button onclick="addToCart('Trailer Chicken & Rice 15Kg', 42)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Ambrosia Chicken and Veggies">
+      <h4>Ambrosia Chicken & Veggies 12Kg</h4>
+      <p>$57.00</p>
+      <button onclick="addToCart('Ambrosia Chicken & Veggies 12Kg', 50)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="Reflex Lamb and Rice">
+      <h4>Reflex Light Sterilised Lamb & Rice 15Kg (Maintenance)</h4>
+      <p>$43.00</p>
+      <button onclick="addToCart('Reflex Light Lamb & Rice 15Kg', 47)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>">
+    <h3>Our Options for your Dog
+    </h3>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Dog Food">
+        <h4>Dog Food</h4>
+        <p>$20.00</p>
+        <button onclick="addToCart('Dog Food', 20)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Cat Toy">
+        <h4>Cat Toy</h4>
+        <p>$8.00</p>
+        <button onclick="addToCart('Cat Toy', 8)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pet Karkos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Pet Karkos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Checkout - Pet Karkos</h1>
+  </header>
+
+  <section>
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+  </section>
+
+  <section>
+    <h2>Customer Details</h2>
+    <form onsubmit="submitOrder(event)">
+      <input type="text" placeholder="Full Name" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <input type="text" placeholder="Address" required><br><br>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const list = document.getElementById('cart-list');
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.product} - $${item.price.toFixed(2)}`;
+      list.appendChild(li);
+      total += item.price;
+    });
+
+    document.getElementById('total').textContent = total.toFixed(2);
+
+    function submitOrder(e) {
+      e.preventDefault();
+      alert('Order submitted! Thank you for shopping with Pet Karkos.');
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+">
+<section id="products">
+  <h3>Our Products</h3>
+  <div class="product-list">
+
+    <div class="product">
+      <img src="images/trailer-chicken-rice.jpg" alt="Trailer Chicken and Rice" style="width:100%; height:auto;">
+      <h4>Trailer Chicken & Rice 15Kg (Maintenance)</h4>
+      <p>$42.00</p>
+      <button onclick="addToCart('Trailer Chicken & Rice 15Kg', 42)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/ambrosia-chicken-veggies.jpg" alt="Ambrosia Chicken and Veggies" style="width:100%; height:auto;">
+      <h4>Ambrosia Chicken & Veggies 12Kg</h4>
+      <p>$57.00</p>
+      <button onclick="addToCart('Ambrosia Chicken & Veggies 12Kg', 50)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="images/reflex-lamb-rice.jpg" alt="Reflex Lamb and Rice" style="width:100%; height:auto;">
+      <h4>Reflex Light Sterilised Lamb & Rice 15Kg (Maintenance)</h4>
+      <p>$47.00</p>
+      <button onclick="addToCart('Reflex Light Lamb & Rice 15Kg', 47)">Add to Cart</button>
+    </div>
+
+  </div>
+</section><style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fffdf0;
+  color: #333;
+}
+
+header {
+  background-color: #ffda2d;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+#hero {
+  background: #fff4b8;
+  padding: 2em;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #ffda2d;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #ffda2d;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}</style><script>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fffdf0;
+  color: #333;
+}
+
+header {
+  background-color: #ffda2d;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+#hero {
+  background: #fff4b8;
+  padding: 2em;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: #fff;
+  padding: 1em;
+  border: 1px solid #ddd;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #ffda2d;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #ffda2d;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+function addToCart(product, price) {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  cart.push({ product, price });
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${product} added to cart!`);
+}</script>
