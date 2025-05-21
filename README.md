@@ -17,3 +17,13 @@ Web.ForEShop
 👉 [View the Live Website](https://jimkarkos11.github.io/pet-karkos/)
 
 ## 📁 Project Structure
+## 📦 Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- GitHub Pages (for hosting)
+
+## 🙌 Created By
+
+Developed for Pet Karkos by Jim Karkos.
